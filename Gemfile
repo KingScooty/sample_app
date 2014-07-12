@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -39,6 +40,8 @@ group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
+
+gem 'heroku_secrets', git: 'https://github.com/alexpeattie/heroku_secrets.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

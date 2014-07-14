@@ -7,6 +7,7 @@ gem 'rails', '4.1.4'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sprockets'
 gem 'bcrypt'
+gem 'bootstrap_form'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -22,6 +23,7 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'factory_girl_rails', '4.2.0'
 end
 
 gem 'minitest'

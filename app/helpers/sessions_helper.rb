@@ -30,6 +30,15 @@ module SessionsHelper
     user == current_user
   end
 
+  def signed_in_user
+    # redirect_to signin_url, notice: "Please sign in." unless signed_in?
+    unless signed_in?
+      store_location
+      flash[:warning] = "Please sign in."
+      redirect_to signin_url
+    end
+  end
+
   def sign_out
     current_user.update_attribute(:remember_token,
                                   User.digest(User.new_remember_token))

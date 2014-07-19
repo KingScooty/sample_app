@@ -43,6 +43,13 @@ Spork.prefork do
     #     --seed 1234
     config.order = "random"
     config.include Capybara::DSL
+
+    RSpec.configure do |c|
+      c.expose_current_running_example_as :example
+    end
+    RSpec.configure do |config|
+      config.infer_spec_type_from_file_location!
+    end
   end
 end
 
